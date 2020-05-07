@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, intial-sclae=1.0">
+    <title>My First React!</title>
+    
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script crossorigin="" src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script>
+        //const h1 = document.createElement('h1');
+        //h1.innerText = 'This is my Inner Text!';
+        //h1 = Element
+        //{} = Object
+        //children = String you want to print
+        const h1 = React.createElement('h1', {}, 'This is my Inner Text!');
+        const div = React.createElement('div', {}, h1);
+
+//to get it on the page
+        const app = document.querySelector('#app');
+        //app.appendChild(h1);
+        //this will render whatever we did on line 22 n 25 for app
+        ReactDOM.render(div, app);
+    </script>
+</body>
+
+</html>
